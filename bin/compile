@@ -59,14 +59,16 @@ echo '$ ls -la $BUILD_DIR/.apt/usr/bin/'
 ls -la $BUILD_DIR/.apt/usr/bin/
 echo '$ ls -la $BUILD_DIR/.apt/usr/local/'
 ls -la $BUILD_DIR/.apt/usr/local/
-mkdir -p /app/.apt/usr/bin/
-echo '$ ls -la $BUILD_DIR/.apt/opt/google/chrome/google-chrome/'
-ls -la $BUILD_DIR/.apt/opt/google/chrome/google-chrome/
-cp $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/vendor/google-chrome
+# mkdir -p /app/.apt/usr/bin/
+echo '$ ls -la $BUILD_DIR/.apt/opt/google/chrome/google-chrome'
+ls -la $BUILD_DIR/.apt/opt/google/chrome/google-chrome
+# ln -s
+# cp $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/vendor/google-chrome
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/vendor/google-chrome
 echo '$ ls -la /app/vendor/'
 ls -la /app/vendor/
-./app/vendor/google-chrome
+. $BUILD_DIR/.apt/opt/google/chrome/google-chrome
+# ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/.
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /usr/local/google-chrome
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /usr/bin/google-chrome
 # ls -la /usr/local/google-chrome
