@@ -68,7 +68,9 @@ ls -la "$BUILD_DIR/vendor/chromedriver/bin"
 ls -la "$BUILD_DIR/vendor/chromedriver/"
 ls -la /usr/local/google-chrome
 ls -la /app/vendor/bin/
-ls -la /usr/bin/
+ls -la /usr/bin/google-chrome
+ls -la /usr/bin/google-chrome-stable
+ls -la /opt/google/chrome/google-chrome
 # ln -s /usr/local/google-chrome /usr/local/google-chrome-stable
 # ln -s /usr/local/google-chrome "$BUILD_DIR/vendor/chromedriver/bin"
 
