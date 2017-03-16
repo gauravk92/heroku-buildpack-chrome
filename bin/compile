@@ -53,6 +53,9 @@ ls -la $BUILD_DIR/.apt/
 ls -la $BUILD_DIR/.apt/opt/
 ls -la $BUILD_DIR/.apt/usr/bin/
 ls -la $BUILD_DIR/.apt/usr/local/
+ln -s /usr/local/google-chrome $BUILD_DIR/.apt/opt/google/chrome/google-chrome
+ln -s /usr/bin/google-chrome $BUILD_DIR/.apt/opt/google/chrome/google-chrome
+ls -la /usr/local/google-chrome
 # ln -s /usr/local/google-chrome /usr/local/google-chrome-stable
 # ln -s /usr/local/google-chrome "$BUILD_DIR/vendor/chromedriver/bin"
 
