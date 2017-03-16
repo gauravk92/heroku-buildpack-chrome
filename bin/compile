@@ -67,8 +67,12 @@ mv "$BUILD_DIR/vendor/chromedriver/chromedriver" "$BUILD_DIR/vendor/chromedriver
 ls -la "$BUILD_DIR/vendor/chromedriver/bin"
 ls -la "$BUILD_DIR/vendor/chromedriver/"
 ls -la /usr/local/google-chrome
-ls -la /app/vendor/
+ls -la /app/vendor/bin/
+ls -la /usr/bin/
+# ln -s /usr/local/google-chrome /usr/local/google-chrome-stable
 # ln -s /usr/local/google-chrome "$BUILD_DIR/vendor/chromedriver/bin"
+
+apt-get -f install
 
 topic "exporting PATH and LIBRARY_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d/chrome.sh"
