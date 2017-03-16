@@ -47,6 +47,14 @@ for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   dpkg -x $DEB $BUILD_DIR/.apt/
 done
 
+ls -la /app/.apt/usr/bin
+ls -la /app/.apt/opt
+ls -la $BUILD_DIR/.apt/
+# ln -s /usr/local/google-chrome /usr/local/google-chrome-stable
+# ln -s /usr/local/google-chrome "$BUILD_DIR/vendor/chromedriver/bin"
+
+apt-get $APT_OPTIONS -f install
+
 topic "Fixing absolute pathes"
 ln -s /app/.apt/usr/bin $BUILD_DIR/xin
 sed -i s:/usr/bin:/app/xin: "$BUILD_DIR/.apt/usr/bin/Xvfb"
@@ -71,13 +79,6 @@ ls -la /app/vendor/bin/
 ls -la /usr/bin/google-chrome
 ls -la /usr/bin/google-chrome-stable
 ls -la /opt/google/chrome/google-chrome
-ls -la /app/.apt/usr/bin
-ls -la /app/.apt/opt
-la -la $BUILD_DIR/.apt/
-# ln -s /usr/local/google-chrome /usr/local/google-chrome-stable
-# ln -s /usr/local/google-chrome "$BUILD_DIR/vendor/chromedriver/bin"
-
-apt-get -f install
 
 topic "exporting PATH and LIBRARY_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d/chrome.sh"
