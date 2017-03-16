@@ -64,6 +64,7 @@ cp $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/vendor/google-chrome
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /app/vendor/google-chrome
 echo '$ ls -la /app/vendor/'
 ls -la /app/vendor/
+./app/vendor/google-chrome
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /usr/local/google-chrome
 # ln -s $BUILD_DIR/.apt/opt/google/chrome/google-chrome /usr/bin/google-chrome
 # ls -la /usr/local/google-chrome
